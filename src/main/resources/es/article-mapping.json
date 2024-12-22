@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "id": { "type": "keyword" },
+    "title": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_smart"
+    },
+    "content": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_smart"
+    },
+    "author": { "type": "keyword" },
+    "category": {
+      "type": "text",
+      "fields": {
+        "keyword": { "type": "keyword" }
+      }
+    },
+    "viewCount": { "type": "integer" },
+    "createTime": { "type": "date" },
+    "commentInfo": {
+      "type": "nested",
+      "properties": {
+        "commentCount": { "type": "integer" },
+        "lastComment": { "type": "text" }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: es-demo
+
+elasticsearch:
+  host: localhost
+  port: 9200
+
+server:
+  port: 8083
